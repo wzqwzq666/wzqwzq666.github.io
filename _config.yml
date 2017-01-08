@@ -1,11 +1,11 @@
 # Basic
 title: 王劣劣
 subtitle: 个人站
-description: 欢迎来到我的个人站~
+description: ~~~~~~~
 # 头像里面的标题
-avatarTitle: wyh9926
+avatarTitle: 看什么看
 # 头像里面的描述
-avatarDesc: iOS 
+avatarDesc: 嘛也没有=
 url: ""
 
 # Comment
@@ -23,7 +23,7 @@ social:
 # 百度统计 
 # 使用博客模板请去掉或者更换 id 
 baidu:
-    id:   
+    id: a9849021589c40b0dd93c04f8518d635   
 
 # Google Analytics
 # 使用博客模板请去掉或者更换 id
