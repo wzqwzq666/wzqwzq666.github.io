@@ -6,17 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <title>文章</title>
-  <meta name="description" content="~~~~~~~">
+  <title>黑苹果 解决cpus=1问题</title>
+  <meta name="description" content="​">
   <meta name="author" content="leopardpan">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="文章">
-  <meta name="twitter:description" content="~~~~~~~">
+  <meta name="twitter:title" content="黑苹果 解决cpus=1问题">
+  <meta name="twitter:description" content="​">
   
   <meta property="og:type" content="article">
-  <meta property="og:title" content="文章">
-  <meta property="og:description" content="~~~~~~~">
+  <meta property="og:title" content="黑苹果 解决cpus=1问题">
+  <meta property="og:description" content="​">
   
   <link rel="icon" type="image/png" href="/images/favicon.png" />
   <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="/css/main.css">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-  <link rel="canonical" href="http://localhost:4000/archive/">
+  <link rel="canonical" href="http://localhost:4000/2016/01/%E8%A7%A3%E5%86%B3-cpus=1-%E9%97%AE%E9%A2%98/">
   <link rel="alternate" type="application/rss+xml" title="王劣劣" href="http://localhost:4000/feed.xml">
   
   <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
@@ -145,84 +145,153 @@
         <div class="content-wrapper__inner">
             <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
+    <h1 class="post-title">黑苹果 解决cpus=1问题</h1>
     <div class="post-meta">
-      <time datetime="" itemprop="datePublished" class="post-meta__date date"></time>
-      <span class="post-meta__tags tags"></span>
+      <img src="/images/calendar.png" width="20px"/> 
+      <time datetime="2016-01-10 00:00:00 +0800" itemprop="datePublished" class="post-meta__date date">2016-01-10</time>  
+         
+      <span id="busuanzi_container_page_pv"> | 阅读：<span id="busuanzi_value_page_pv"></span>次</span>
+    </p>
     </div>
-    <h1 class="post-title">文章</h1>
   </header>
 
   <section class="post">
-    
+    <p>​</p>
 
+<p>​		初次安装黑苹果时，进入安装界面无限重启后加入了 cpus=1 参数才能启动成功，但是启动后发现cpu是真的在单核工作 根本没有发挥应有的作用，下面说一下解决方法</p>
 
-<div class="page card">
+<p>  </p>
 
+<ul>
+  <li>
+    <h3 id="查看cpu是否正常工作">查看cpu是否正常工作</h3>
 
+    <ul>
+      <li>打开 活动监视器</li>
+      <li>双击 cpu 负载</li>
+      <li>如果只有一个核心有运行 其他三个均为全黑色 则说明cpu被限制</li>
+      <li>尝试以下办法解决</li>
+    </ul>
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-      <div class="hat_title">
-        <h3>2016</h3>
-      </div>
-      <div class="post_list">
-      <ul>
-      
-    
-  
-    <li>
-      <span>
-        2016-01-10
-      </span>
-       &raquo; 
-      <a href="/2016/01/%E8%A7%A3%E5%86%B3-cpus=1-%E9%97%AE%E9%A2%98/">黑苹果 解决cpus=1问题</a>
-    </li>
- 
-    
-      
-        </ul>
-         </div>         
-         
-        <div class="hat_title">
-         <h3> 2015</h3>
+    <p>  </p>
+  </li>
+  <li>
+    <h3 id="修改bios设置">修改BIOS设置</h3>
+
+    <ul>
+      <li>
+        <p>在BIOS设置里找到Limit CPUID Maximum</p>
+      </li>
+      <li>
+        <p>关闭(选择Disabled)</p>
+
+        <p><strong>CPUID最大限制设置说明</strong></p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code>开启/关闭CPUID最大限制，默认是关闭。
+这项设置的含义是限制执行CPUID指令返回最大数值大。
+CPU ID 包括了用户计算机当今的信息处理器的信息。
+信息包括型号，信息处理器家庭，高速缓存尺寸，时钟速度和制造厂codename 等。
+通过查询可以知道一些信息：晶体管数，针脚类型，尺寸等。
+较新的 CPU 执行 CPUID 指令后因返回最大数值可能会造成某些操作系统误动作。
+WINDOW不需要开启。
+</code></pre>
         </div>
-        <div class="post_list">
-        <ul>
-      
-    
-  
-    
-    
-    
-    
-  
-    
-  
-    <li>
-      <span>
-        2015-08-25
-      </span>
-       &raquo; 
-      <a href="/2015/08/HEXO%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">HEXO搭建个人博客</a>
-    </li>
- 
-    
-      </ul>
-      
-    
-  
 
-</div>
-</div>
+        <p>​</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="修改启动配置">修改启动配置</h3>
+
+    <ul>
+      <li>
+        <p>打开 EFI/CLOVER下config.plist</p>
+      </li>
+      <li>
+        <p>将</p>
+
+        <div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;string&gt;</span>dart=0 nvda_drv=1 kext-dev-mode=1 rootless=0 cpus=1<span class="nt">&lt;/string&gt;</span>
+</code></pre>
+        </div>
+
+        <p>修改为</p>
+
+        <div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;string&gt;</span>dart=0 nvda_drv=1 kext-dev-mode=1 rootless=0 cpus=4<span class="nt">&lt;/string&gt;</span>
+</code></pre>
+        </div>
+
+        <p>其中4为cpu真实核心数，也可以尝试去掉cpus=1参数(我并没有验证)</p>
+
+        <p>  </p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <h3 id="查看结果">查看结果</h3>
+
+    <ul>
+      <li>重启查看cpu是否正常工作</li>
+      <li>如启动失败改回原配置或尝试去掉cpus= 参数</li>
+    </ul>
+
+    <p>  </p>
+  </li>
+  <li>
+    <h3 id="配置参考">配置参考</h3>
+
+    <ul>
+      <li>
+        <div class="highlighter-rouge"><pre class="highlight"><code>CPU i5-3470
+主板 B75M-A
+MACOS 10.12.2
+</code></pre>
+        </div>
+      </li>
+    </ul>
+
+    <p>​</p>
+  </li>
+</ul>
+
+
+
   </section>
 </article>
+
+<section>
+       <ul class="pager">
+        
+        <li class="previous">
+            <a href="/2015/08/HEXO%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" data-toggle="tooltip" data-placement="top" title="HEXO搭建个人博客">上一篇：  <span>HEXO搭建个人博客</span>
+            </a>
+        </li>
+        
+        
+    </ul>
+</section>
+
+<section class="post-comments">
+
+  
+    <div class="ds-thread" data-thread-key="/2016/01/%E8%A7%A3%E5%86%B3-cpus=1-%E9%97%AE%E9%A2%98/" data-title="黑苹果 解决cpus=1问题" data-url="http://localhost:4000/2016/01/%E8%A7%A3%E5%86%B3-cpus=1-%E9%97%AE%E9%A2%98/"></div>
+
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:"wyh9926"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+  
+  
+  
+  
+</section>
+
 
             <section class="footer">
     <footer>
