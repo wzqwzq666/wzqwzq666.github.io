@@ -14,7 +14,7 @@ title: 关于我
 
 
 
-本博客参考自  <a target="_blank" href='https://github.com/leopardpan/leopardpan.github.io/'>leopardpan的Github</a> ，谢谢~
+本博客参考自  <a target="_blank" href='https://github.com/leopardpan/leopardpan.github.io/'>leopardpan</a> 
 
 {% include comments.html %}
 
