@@ -1,4 +1,4 @@
-setting---
+---
 layout: post
 title: "Ubuntu安装Gogs设置自启动"
 date: 2017-07-20
