@@ -14,8 +14,7 @@ tag: 常用设置和命令
   127.0.0.1 localhost
   
   127.0.0.1 localapache
-  
-  192.168.2.121 localjianhua
+
 - apache 修改端口
 
     /Users/wzq/ect/apache2/httpd.conf 中Listen后改成80
