@@ -3,10 +3,9 @@ layout: page
 title: 关于我 
 ---
 
-一个码农，喜欢折腾一些不了解的玩意儿
+不想写作业,也不想写作业.
 <p>
-这儿就是其中一个 
-打算用来放笔记
+打算在这里放一些小笔记什么的.
 
 
 
@@ -14,7 +13,6 @@ title: 关于我
 
 
 
-本博客参考自  <a target="_blank" href='https://github.com/leopardpan/leopardpan.github.io/'>leopardpan</a> 
 
 {% include comments.html %}
 
