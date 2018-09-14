@@ -47,7 +47,8 @@ tag: nginx
 ### tomcat 配置
 - 修改`server.xml`,找到`<Connector port="8080" protocol="HTTP/1.1" `一行后添加`proxyPort="443"` 
 - 在`HOST`节点内增加
-```
+
+```xml
 <Valve className="org.apache.catalina.valves.RemoteIpValve"
 		remoteIpHeader="x-forwarded-for"
 		remoteIpProxiesHeader="x-forwarded-by"
